@@ -1,9 +1,10 @@
-//Getting element by id// 
-document.getElementById('page-banner');
+// to grab the 2nd li from the parent ul book-list//
 
-var banner = document.getElementById('page-banner');
+const wmf = document.querySelector('#book-list li:nth-child(2).name');
+// console.log(wmf);
 
-//Getting element by id//
-document.getElementById('book-list');
-
-var bookList = document.getElementById('book-list');
+// grab a collection of elements - grab every single span tag//
+var books = document.querySelector('#book-list li.name');
+// console.log(books);
+books = document.querySelectorAll('#book-list li.name');
+console.log(books);
