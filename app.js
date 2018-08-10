@@ -1,8 +1,9 @@
-const banner = document.querySelector('#page-banner');
+const bookList = document.querySelector('#book-list');
 
-console.log('#page-banner node type is:', banner.nodeType);
-console.log('#page-banner node name is:', banner.nodeName);
-console.log('#page-banner has child nodes:', banner.hasChildNodes());
+// 2 ways to retrieve the parent of an element - moving up
+console.log('the parent node is:', bookList.parentNode);
+// 2 levels up
+console.log('the parent element is:', bookList.parentElement.parentElement);
 
-const clonedBanner = banner.cloneNode(true);
-console.log(clonedBanner);
+// finding children
+console.log(bookList.children);
