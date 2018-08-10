@@ -1,9 +1,9 @@
 const bookList = document.querySelector('#book-list');
 
-// 2 ways to retrieve the parent of an element - moving up
-console.log('the parent node is:', bookList.parentNode);
-// 2 levels up
-console.log('the parent element is:', bookList.parentElement.parentElement);
+console.log('book-list next sibling is:', bookList.nextSibling);
+console.log('book-list next element sibling is:', bookList.nextElementSibling);
 
-// finding children
-console.log(bookList.children);
+console.log('book-list previous sibling is:', bookList.previousSibling);
+console.log('book-list pervious element sibling is:', bookList.previousElementSibling);
+
+bookList.previousElementSibling.querySelector('p').innerHTML += '</br>Too cool for everyone else!';
