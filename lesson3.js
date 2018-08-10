@@ -11,7 +11,7 @@ document.getElementsByClassName('title');
 var titles = document.getElementsByClassName('title');
 
 // Getting multiple elements by tag name//
-var lis = document.getElementsbyTagName('li');
+var lis = document.getElementsByTagName('li');
 
 
 var titles = document.getElementsByClassName('title');
