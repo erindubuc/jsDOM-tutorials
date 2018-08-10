@@ -1,16 +1,11 @@
-// query can grab an element 
-const wmf = document.querySelector('#book-list li:nth-child(2).name');
-// console.log(wmf);
+var books = document.querySelectorAll('#book-list li .name');
 
-// make variable to store books in, but this will only grab one
-var books = document.querySelector('#book-list li .name');
-// console.log(books);
- 
-// this selector can grab ALL of the elements in the list
-books = document.querySelectorAll('#book-list li .name');
-// console.log(books);
-
-// now, this function can display the array
+// can change text content w/ textContent returning a string
 Array.from(books).forEach(function(book) {
-    console.log(book);
+    book.textContent += '(book title)';
 });
+
+// grabs HTML and logs to console...then bookList.innerHTML = '<text you want to change>'
+const bookList = document.querySelector('#book-list');
+// bookList.innerHTML = '<h2>Books and more books...</h2>';
+bookList.innerHTML += '<p>This is how you add HTML<p>';
