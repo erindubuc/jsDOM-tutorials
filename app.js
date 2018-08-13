@@ -15,8 +15,7 @@ const addForm = document.forms['add-book'];
     e.preventDefault();
     const value = addForm.querySelector('input[type="text"]').value;
 
-
-// create elements
+    // create elements
     const li = document.createElement('li');
     const bookName = document.createElement('span');
     const deleteBtn = document.createElement('span');
@@ -37,12 +36,13 @@ const addForm = document.forms['add-book'];
     
 });
 
-                // notes on changing attributes directly in the console
-// var book = document.querySelector('li:first-child .name')
 
-// book.getAttribute('class') checks to see what the class name is
-// book.setAttribute('class', 'name-2') changes the class name
-// book.hasAttribute('class') would return true
-// book.hasAttribute('href') would return false
-// book.removeAttribute('class') removes the class 
-// book.setAttribute('class', 'name') gives the deleted class a name again
+// hide books
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function(e) {
+    if(hideBox.checked) {
+        list.style.display = "none";
+    } else {
+        list.style.display = "initial";
+    }
+});
