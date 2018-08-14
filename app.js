@@ -1,7 +1,8 @@
-const list = document.querySelector('#book-list ul');
+document.addEventListener('DOMContentLoaded', function() {
+  const list = document.querySelector('#book-list ul');
 
 // delete books "delete" event
-list.addEventListener('click', function(e) {
+    list.addEventListener('click', function(e) {
     if (e.target.className == 'delete'){
         const li = e.target.parentElement;
         list.removeChild(li);
@@ -9,7 +10,7 @@ list.addEventListener('click', function(e) {
 });
 
 // Add book-list "submit" event grabs value of field
-const addForm = document.forms['add-book'];
+    const addForm = document.forms['add-book'];
 
     addForm.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -38,8 +39,8 @@ const addForm = document.forms['add-book'];
 
 
 // hide books
-const hideBox = document.querySelector('#hide');
-hideBox.addEventListener('change', function(e) {
+    const hideBox = document.querySelector('#hide');
+    hideBox.addEventListener('change', function(e) {
     if(hideBox.checked) {
         list.style.display = "none";
     } else {
@@ -48,8 +49,8 @@ hideBox.addEventListener('change', function(e) {
 });
 
 // filter books
-const searchBar = document.forms['search-books'].querySelector('input');
-searchBar.addEventListener('keyup', function(e) {
+    const searchBar = document.forms['search-books'].querySelector('input');
+    searchBar.addEventListener('keyup', function(e) {
     const term = e.target.value.toLowerCase();
     const books = list.getElementsByTagName('li');
     Array.from(books).forEach(function(book) {
@@ -63,9 +64,9 @@ searchBar.addEventListener('keyup', function(e) {
 })
 
 // tabbed content
-const tabs = document.querySelector('.tabs');
-const panels = document.querySelectorAll('.panel');
-tabs.addEventListener('click', function(e) {
+    const tabs = document.querySelector('.tabs');
+    const panels = document.querySelectorAll('.panel');
+    tabs.addEventListener('click', function(e) {
     if(e.target.tagName == "LI"){
         const targetPanel = document.querySelector(e.target.dataset.target);
         panels.forEach(function(panel) {
@@ -76,4 +77,11 @@ tabs.addEventListener('click', function(e) {
             }
         })
     }
+})  
+    
+    
+    
+    
+    
 })
+
